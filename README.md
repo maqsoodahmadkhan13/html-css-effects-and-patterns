@@ -62,8 +62,9 @@ Projects are organized by **effect category**, with each example fully self-cont
 | :------------------------------ | :---------------------------------------------------------------------------------- | :-----: |
 | **Calc Background**             | [View](./Patterns/Background%20Patterns/Calc%20Bg/index.html)                       |    🔢   |
 | **Circular Pattern**            | [View](./Patterns/Background%20Patterns/Circular%20Pattern%20Bg/index.html)         |    🔵   |
+| **Glass Effect Blur Bg**     | [View](./Patterns/Background%20Patterns/Glass%20Effect%20%20Blur%20Bg/index.html)    |    ❄️   |
 | **Linear Gradient Background**  | [View](./Patterns/Background%20Patterns/Linear%20Gradient%20Bg/index.html)          |  🏳️‍🌈 |
-| **Moving Box Pattern**          | [View](./Patterns/Background%20Patterns/Moving%20Box%20Pattern%20Bg/index.html)     |    📦   |
+| **Moving Box Pattern Background** | [View](./Patterns/Background%20Patterns/Moving%20Box%20Pattern%20Bg/index.html)     |    📦   |
 | **Radial Pattern**              | [View](./Patterns/Background%20Patterns/Radial%20Pattern%20Bg/index.html)           |    🎯   |
 | **Repeated Conic Pattern**      | [View](./Patterns/Background%20Patterns/Repeated%20Conic%20Pattern%20Bg/index.html) |    🍦   |
 | **Rough Background**            | [View](./Patterns/Background%20Patterns/Rough%20Bg/index.html)                      |    🌑   |
@@ -78,7 +79,6 @@ Projects are organized by **effect category**, with each example fully self-cont
 
 | Effect Name               | Path                                                                    | Preview |
 | :------------------------ | :---------------------------------------------------------------------- | :-----: |
-| **Glass Effect Text**     | [View](./Patterns/Text%20Patterns/Glass%20Effect%20Text/index.html)     |    🧊   |
 | **Gradient Shining Text** | [View](./Patterns/Text%20Patterns/Gradient%20Shining%20Text/index.html) |    ✨    |
 | **Milk Effect Text**      | [View](./Patterns/Text%20Patterns/Milk%20Effect%20Text/index.html)      |    🥛   |
 | **Moving Effect Text**    | [View](./Patterns/Text%20Patterns/Moving%20Effect%20Text/index.html)    |    🏃   |

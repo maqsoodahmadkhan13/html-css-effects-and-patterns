@@ -3,12 +3,15 @@ body {
   justify-content: center;
   align-items: center;
   background-color: black;
+
 }
 
 .container {
   background-color: black;
-  filter: contrast(10);
-  -webkit-filter: contrast(10);
+  filter: contrast(1);
+  -webkit-filter: contrast(1);
+  position: relative;
+  top: 50%;
 }
 
 p {
@@ -21,8 +24,8 @@ p {
   margin: 0;
   filter: opacity(0);
   -webkit-filter: opacity(0);
-  animation: show 5s infinite;
-  -webkit-animation: show 10s infinite;
+  animation: show 15s infinite;
+  -webkit-animation: show 15s infinite;
 }
 
 p:nth-child(1) {
@@ -41,25 +44,22 @@ p:nth-child(2) {
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
   animation-direction: reverse;
-  animation-delay: -1s;
+  animation-delay: -2s;
 }
 @keyframes show {
-  0% {
-    filter: opacity(0) blur(0.08em);
-    -webkit-filter: opacity(0) blur(0.08em);
+  0%,100% {
+    filter: opacity(0) blur(0.05em);
+    -webkit-filter: opacity(0) blur(0.05em);
     letter-spacing: -0.8em;
-  }
-  20% {
-    filter: opacity(1) blur(0.08em);
-    -webkit-filter: opacity(1) blur(0.08em);
-  }
-  40% {
-    filter: opacity(1) blur(0.08em);
-    -webkit-filter: opacity(1) blur(0.08em);
-  }
-  40% {
-    filter: opacity(0) blur(0.28em);
-    -webkit-filter: opacity(0) blur(0.28em);
+}
+  20%,80% {
+    filter: opacity(1) blur(0.03em);
+    -webkit-filter: opacity(1) blur(0.03em);
+}
+
+  60% {
+    filter: opacity(0) blur(0.01em);
+    -webkit-filter: opacity(0) blur(0.01em);
     letter-spacing: 0.24em;
-  }
+}
 }
