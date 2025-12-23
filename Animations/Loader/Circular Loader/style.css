@@ -1,0 +1,87 @@
+:root {
+  --bg-color: #0f172a;
+  --loader-color: #38bdf8;
+  --loader-glow: rgba(56, 189, 248, 0.4);
+  --text-color: #f8fafc;
+  --font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  --loader-size: 100px;
+  --border-width: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-family);
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+#loader {
+  height: var(--loader-size);
+  width: var(--loader-size);
+  border: var(--border-width) solid rgba(255, 255, 255, 0.1);
+  border-top: var(--border-width) solid var(--loader-color);
+  border-radius: 50%;
+  animation: spin 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  box-shadow: 0 0 15px var(--loader-glow);
+}
+
+#text {
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  position: relative;
+  color: var(--text-color);
+  opacity: 0.9;
+}
+
+#text::after {
+  content: '';
+  position: absolute;
+  animation: dots 1.5s infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dots {
+  0% {
+    content: '';
+  }
+
+  25% {
+    content: '.';
+  }
+
+  50% {
+    content: '..';
+  }
+
+  75% {
+    content: '...';
+  }
+}

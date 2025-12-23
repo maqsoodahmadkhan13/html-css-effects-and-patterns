@@ -1,0 +1,66 @@
+.text-effect {
+  overflow: hidden;
+  position: relative;
+}
+
+.neon {
+  position: relative;
+  color: transparent;
+}
+
+.neon {
+  font: 700 220px "Lato", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+}
+.neon::before, .neon::after {
+  content: attr(data-text);
+  color: white;
+  top: 0;
+  left: 0;
+  position: absolute;
+  filter: blur(0.02em);
+  -webkit-filter: blur(0.02em);
+}
+.neon::after {
+  mix-blend-mode: difference;
+}
+
+.gradient {
+  background: linear-gradient(45deg, red, blue);
+  mix-blend-mode: multiply;
+}
+
+.spotlight {
+  background: radial-gradient(circle, white, transparent 25%) 0 0/25% 25%, radial-gradient(circle, white, black 25%) 50% 50%/12.5% 12.5%;
+  top: -100%;
+  left: -100%;
+  mix-blend-mode: color-dodge;
+  animation: light 5s infinite linear;
+  -webkit-animation: light 5s infinite linear;
+}
+
+@keyframes light {
+  100% {
+    transform: translate3d(50%, 50%, 0);
+    -webkit-transform: translate3d(50%, 50%, 0);
+    -moz-transform: translate3d(50%, 50%, 0);
+    -ms-transform: translate3d(50%, 50%, 0);
+    -o-transform: translate3d(50%, 50%, 0);
+  }
+}
+.gradient, .spotlight {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  pointer-events: none;
+}
+
+body {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}/*# sourceMappingURL=style.css.map */

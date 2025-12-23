@@ -1,0 +1,57 @@
+body {
+  padding: 0;
+  margin: 0; 
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #222;
+}
+
+.bar-loader {
+  display: flex;
+  gap: 10px;
+  animation: directionSwitch 3s linear infinite;
+}
+
+.bar-loader span {
+  display: inline-block;
+  width: 20px;
+  height: 40px;
+  background-color: dodgerblue;
+  border-radius: 5px;
+  animation: barMove 1.5s ease-in-out infinite;
+}
+
+/* Keyframes for bar bouncing */
+@keyframes barMove {
+  0%, 100% {
+    transform: scaleY(0.5);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scaleY(1.5);
+    opacity: 1;
+  }
+}
+
+/*  direction: horizontal  */
+@keyframes directionSwitch {
+  
+  0%, 100% {
+    flex-direction: row;  /* Horizontal phase */
+  }
+}
+
+/* Optional: small delays for wave effect */
+.bar-loader .one {
+  animation-delay: 0s;
+}
+.bar-loader .two {
+  animation-delay: 0.2s;
+}
+.bar-loader .three {
+  animation-delay: 0.4s;
+}

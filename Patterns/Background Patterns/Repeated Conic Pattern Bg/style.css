@@ -1,0 +1,15 @@
+body {
+  background: repeating-conic-gradient(
+        from 30deg,
+        #0000 0 120deg,
+        #0d1906 0 180deg
+      )
+      64px 36px,
+    repeating-conic-gradient(
+      from 30deg,
+      red 0 60deg,
+      green 0 120deg,
+      black 0 180deg
+    );
+  background-size: 128px 74px;
+}

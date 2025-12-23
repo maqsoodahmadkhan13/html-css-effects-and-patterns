@@ -1,0 +1,70 @@
+body {
+  position: fixed;
+  margin: 0;
+  height: 100vh;
+  top: 50%;
+  left: 50%;
+  animation: 3s move infinite ease-in-out alternate,
+    3s zoom infinite ease-in-out alternate;
+  -webkit-animation: 3s move infinite ease-in-out alternate,
+    3s zoom infinite ease-in-out alternate;
+}
+@keyframes zoom {
+  to {
+    transform: scale(2);
+    -webkit-transform: scale(2);
+    -moz-transform: scale(2);
+    -ms-transform: scale(2);
+    -o-transform: scale(2);
+  }
+}
+body::before {
+  content: "";
+  width: 200vmax;
+  height: 200vmax;
+  background-color: red;
+  color: pink;
+  position: fixed;
+  background-image: linear-gradient(
+      45deg,
+      currentColor 25%,
+      transparent 25%,
+      transparent 75%,
+      currentColor 75%
+    ),
+    linear-gradient(
+      45deg,
+      currentColor 25%,
+      transparent 25%,
+      transparent 75%,
+      currentColor 75%
+    );
+  background-position: 0 0, 5vmax 5vmax;
+  background-size: 10vmax 10vmax;
+  top: 50%;
+  left: 50%;
+  animation: 9s move ease infinite;
+  -webkit-animation: 9s move ease infinite alternate,
+    9s -1.5s rotate infinite ease-in-out alternate;
+}
+@keyframes rotate {
+  to {
+    transform: rotate(180deg);
+    filter: hue-rotate(1turn);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -webkit-filter: hue-rotate(1turn);
+  }
+}
+@keyframes move {
+  from {
+    left: -40%;
+    top: -40%;
+  }
+  to {
+    left: -60%;
+    top: -60%;
+  }
+}

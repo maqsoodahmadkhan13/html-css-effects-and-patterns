@@ -1,0 +1,55 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.co {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ab {
+  height: 100vh;
+  width: 100vw;
+  animation: color 0.3s ease infinite;
+  -webkit-animation: color 0.3s ease infinite;
+}
+
+@keyframes color {
+  0% {
+    background: repeating-radial-gradient(circle, white 1%, black 10%);
+    height: 100vh;
+    width: 100vw;
+  }
+  10% {
+    background: repeating-radial-gradient(circle, white 2%, black 11%);
+  }
+  20% {
+    background: repeating-radial-gradient(circle, white 3%, black 12%);
+  }
+  30% {
+    background: repeating-radial-gradient(circle, white 4%, black 13%);
+  }
+  40% {
+    background: repeating-radial-gradient(circle, white 5%, black 14%);
+  }
+  50% {
+    background: repeating-radial-gradient(circle, white 6%, black 15%);
+  }
+  60% {
+    background: repeating-radial-gradient(circle, white 7%, black 16%);
+  }
+  70% {
+    background: repeating-radial-gradient(circle, white 8%, black 17%);
+  }
+  80% {
+    background: repeating-radial-gradient(circle, white 9%, black 18%);
+  }
+  90% {
+    background: repeating-radial-gradient(circle, white 10%, black 19%);
+  }
+  100% {
+    background: repeating-radial-gradient(circle, white 11%, black 20%);
+  }
+}

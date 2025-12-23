@@ -1,0 +1,7 @@
+body {
+  /*FirstPattern*/ 
+  --s: 120px;
+  --g: radial-gradient(#0000 70%, #1a2030 71%);
+  background: var(--g), var(--g) calc(var(--s) / 2) calc(var(--s) / 2),    conic-gradient(#0f9177 25%, #fdebad 0 50%, #de4434 0 75%, #b5d999 0);
+  background-size: var(--s) var(--s);
+}

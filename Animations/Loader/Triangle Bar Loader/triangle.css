@@ -1,0 +1,57 @@
+body {
+      padding: 0;
+      margin: 0;
+      overflow: hidden;
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #222;
+    }
+
+    .bar-loader {
+      position: relative;
+      width: 120px;
+      height: 120px;
+    }
+
+    .bar-loader span {
+      position: absolute;
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background-color: dodgerblue;
+      border-radius: 5px;
+      animation: move 2.5s infinite ease-in-out;
+    }
+
+    .bar-loader .one {
+      animation-delay: 0s;
+    }
+
+    .bar-loader .two {
+      animation-delay: 0.2s;
+    }
+
+    .bar-loader .three {
+      animation-delay: 0.4s;
+    }
+
+    @keyframes move {
+      0% {
+        transform: translate(0, 0);
+      }
+      25% {
+        transform: translate(40px, 0); /* move horizontally */
+      }
+      50% {
+        transform: translate(80px, 0); /* far right */
+      }
+      75% {
+        transform: translate(80px, 80px);
+      }
+      100% {
+        transform: translate(0, 0); /* back to start */
+      }
+    }

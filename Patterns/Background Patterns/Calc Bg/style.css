@@ -1,0 +1,90 @@
+body {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+}
+
+.container {
+  display: grid;
+  --column: 6;
+  font-size: 8px;
+  grid-template-columns: repeat(var(--column), 1 fr);
+}
+
+.square {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid: gap 0.2em;
+  padding: 0.1em;
+}
+
+.square span {
+  display: block;
+  border: 2.5em solid transparent;
+  color: #ddd;
+  transform: rotate(calc(45deg + 90deg * 0));
+  animation: rotate 2s ease-in-out infinite;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  -webkit-transform: rotate(calc(45deg + 90deg * 0));
+  -moz-transform: rotate(calc(45deg + 90deg * 0));
+  -ms-transform: rotate(calc(45deg + 90deg * 0));
+  -o-transform: rotate(calc(45deg + 90deg * 0));
+  -webkit-animation: rotate 2s ease-in-out infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(calc(45deg + 90deg * 0));
+    -webkit-transform: rotate(calc(45deg + 90deg * 0));
+    -moz-transform: rotate(calc(45deg + 90deg * 0));
+    -ms-transform: rotate(calc(45deg + 90deg * 0));
+    -o-transform: rotate(calc(45deg + 90deg * 0));
+  }
+  25% {
+    transform: rotate(calc(45deg + 90deg * 1));
+    -webkit-transform: rotate(calc(45deg + 90deg * 1));
+    -moz-transform: rotate(calc(45deg + 90deg * 1));
+    -ms-transform: rotate(calc(45deg + 90deg * 1));
+    -o-transform: rotate(calc(45deg + 90deg * 1));
+  }
+  50% {
+    transform: rotate(calc(45deg + 90deg * 2));
+    -webkit-transform: rotate(calc(45deg + 90deg * 2));
+    -moz-transform: rotate(calc(45deg + 90deg * 2));
+    -ms-transform: rotate(calc(45deg + 90deg * 2));
+    -o-transform: rotate(calc(45deg + 90deg * 2));
+  }
+  75% {
+    transform: rotate(calc(45deg + 90deg * 3));
+    -webkit-transform: rotate(calc(45deg + 90deg * 3));
+    -moz-transform: rotate(calc(45deg + 90deg * 3));
+    -ms-transform: rotate(calc(45deg + 90deg * 3));
+    -o-transform: rotate(calc(45deg + 90deg * 3));
+  }
+  100% {
+    transform: rotate(calc(45deg + 90deg * 4));
+    -webkit-transform: rotate(calc(45deg + 90deg * 4));
+    -moz-transform: rotate(calc(45deg + 90deg * 4));
+    -ms-transform: rotate(calc(45deg + 90deg * 4));
+    -o-transform: rotate(calc(45deg + 90deg * 4));
+  }
+}
+
+.square span:nth-child(1),
+.square span:nth-child(4) {
+  border-left-color: currentColor;
+  border-right-color: currentColor;
+}
+.square span:nth-child(2),
+.square span:nth-child(3) {
+  border-top-color: currentColor;
+  border-bottom-color: currentColor;
+  animation-direction: reverse;
+}
